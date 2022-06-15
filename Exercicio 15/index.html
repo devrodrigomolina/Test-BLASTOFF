@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste BLASOFF</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 1px solid;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: 
+      'header header header'
+      'main main aside'
+      'section section2 aside'
+      ;
+      text-align: center;
+      font-size: 2rem;
+      height: 100vh;
+    }
+    .header {
+      background: red;
+      grid-area: header;
+    }
+    .main {
+      background: blue;
+      grid-area: main;
+    }
+    .aside {
+      background: green;
+      grid-area: aside;
+    }
+    .section {
+      background: rgb(201, 2, 191);
+      grid-area: section;
+    }
+    .section2 {
+      background: rgb(2, 128, 201);
+      grid-area: section2;
+    }
+    @media (max-width: 768px){
+      .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'header header'
+        'main main'
+        'section section2'
+        'aside aside'
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      A
+    </header>
+    <main class="main">
+      B
+    </main>
+    <aside class="aside">
+      E
+    </aside>
+  
+    <section class="section">C</section>
+    <section class="section2">D</section>
+  </div>
+</body>
+</html>
